@@ -1,0 +1,9 @@
+*{
+    font-family: 'Fira Sans', sans-serif;
+    /*font-family: 'Fira Mono', monospace;*/
+    /*font-family: 'Roboto Mono', monospace;*/
+}
+
+p{
+    background-color: rgb(0, 110, 255);
+}
