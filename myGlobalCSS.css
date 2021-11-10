@@ -5,11 +5,12 @@
 }
 
 /* STYLES FOR DIVS AND CONTAINERS */
+/* MY PERSONAL CSS STYLES THAT HELP ME ORGANIZE INFORMATION */
 .bd-content{
     position: relative;
     margin-bottom: 100px;
 }
-.boundingLines{
+.boundingLines{ 
     width: 100%;
     height: 100%;
     top: 25px;
@@ -17,6 +18,17 @@
     border-radius: 15px;
     z-index: -1;
     position: absolute;
+}
+.subHeader{
+    position: relative;
+}
+.solidLine{
+    border-top: 2px solid rgba(0, 0, 0, 0.3);
+    border-left: 1pt solid black;
+    width: 100%;
+    top: 50%;
+    position: absolute;
+    z-index: -1;
 }
 
 /* MARGINS */
@@ -94,8 +106,30 @@ code, code b{
     border-radius: 10px;
 }
 
+
+/* BACKGROUN COLORS FOR TEXT */
 .red{
     background-color: rgba(255, 0, 0, 0.3);
+    border-radius: 5px;
+    padding: 0.1em 0.3em;
+}
+.green{
+    background-color: rgba(0, 128, 0, 0.3);
+    border-radius: 5px;
+    padding: 0.1em 0.3em;
+}
+.blue{
+    background-color: rgba(0, 0, 255, 0.3);
+    border-radius: 5px;
+    padding: 0.1em 0.3em;
+}
+.orange{
+    background-color: rgba(255, 166, 0, 0.600);
+    border-radius: 5px;
+    padding: 0.1em 0.3em;
+}
+.gold{
+    background-color: rgba(255, 215, 0, 0.600);
     border-radius: 5px;
     padding: 0.1em 0.3em;
 }
