@@ -1,10 +1,56 @@
 *{
-    font-family: 'Nunito', sans-serif;
-    /* font-family: 'Fira Sans', sans-serif; */
-    /*font-family: 'Fira Mono', monospace;*/
-    /*font-family: 'Roboto Mono', monospace;*/
+    /* font-family: 'Nunito', sans-serif; */
+    /* font-family: 'Azeret Mono', monospace; */
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 500;
+
+    /*
+    font-family: 'Azeret Mono', monospace;
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Fira Sans', sans-serif;
+    font-family: 'Fira Mono', monospace;
+    font-family: 'Roboto Mono', monospace;
+    
+
+    pink-intensify: #ff00aa 
+    #850058 #310021 #200617
+
+    #d63384
+
+    271938
+    #871698 
+    #ff00dd
+    #ff00ff
+    #162324
+    271938 
+
+    perfect pink: #8d2985
+    #871698 
+    */
+}
+.ls-01{
+    letter-spacing: .01rem;
+}
+:root {
+
+    --grey: #4b5757;
+    --dark-grey: #212727;
+    --joe-grey: #36413f;
+
+    --neon-border: #08f;
+    --neon-text: #8d2985;
+
+    --neon-yellow-text: #dbba3d;
+    --light-yellow: #feebc8;
+    --truth-yellow: #dbba3d;
+
+    --bee-orange: #e86a04;
+
 }
 body{
+    /* background-color: #000000; */
+    background-color: #ffffff;
+    color: #c1b0a8 !important;
     font-size: 16px;
 }
 html {
@@ -33,6 +79,30 @@ hr{
     box-shadow: 3px 5px 8px 2px #00000021;
     position: absolute;
 }
+.boundingLines-darkMode{
+    width: 100%;
+    height: 100%;
+    top: calc(1.5rem + 0.1vh);
+    border: 2px solid #ffffff;
+    border-radius: 0.5em;
+    z-index: -1;
+    box-shadow: 0px 0px 4px #feebc8;
+    position: absolute;
+}
+.boundingPink{
+    box-shadow:
+        0 0 .25rem #fff,
+        inset 0 0 .25rem #fff,
+        0 0 .5rem #ff00aa,
+        inset 0 0 .5rem #ff00aa,
+        0 0 .5rem #8d2985,
+        inset 0 0 .5rem #8d2985;
+}
+.boundingYellow{
+    box-shadow:
+        0 0 1rem var(--neon-yellow-text-color),
+        inset 0 0 1rem var(--neon-yellow-text-color);
+}
 .innerBoundingLines{
     width: 100%;
     height: 100%;
@@ -43,12 +113,29 @@ hr{
     box-shadow: 3px 5px 8px 2px #00000021;
     position: absolute;
 }
+.innerBoundingLines-darkMode{
+    width: 100%;
+    height: 100%;
+    top: calc(1.4rem + 0.1vh);
+    border: 2px solid #ffffff;
+    border-radius: 0.5em;
+    z-index: -1;
+    box-shadow: 0px 0px 4px #feebc8; /*using light yellow*/
+    position: absolute;
+}
 .subHeader{
     position: relative;
     margin: 6rem 0 1.5rem 0;
 }
 .solidLine{
-    border-top: 1.3px solid rgba(0, 0, 0, 0.15);
+    border-top: 1.3px solid rgba(255, 255, 255, 0.15);
+    width: 100%;
+    top: 50%;
+    position: absolute;
+    z-index: -1;
+}
+.solidLineqq{
+    border-top: 1.3px solid #eee1ec;
     width: 100%;
     top: 50%;
     position: absolute;
@@ -121,6 +208,7 @@ h6{
     }
     h3 {
         font-size: 1.75rem;
+        font-weight: 500;
     }
     h4 {
         font-size: 1.5rem;
@@ -134,9 +222,28 @@ h6{
 }
 
 .lineText{ /* USED SO THAT "boundingLines" DOESN'T GO TROUGH THE TEXT*/
-    background-color: white;
+    /* background-color: #212727; */
+    background-color: #000000;
+    box-shadow:
+        5px 0 .5rem #000000,
+        -5px 0 .5rem #000000,
+        0 5px .5rem #000000,
+        0 -5px .5rem #000000;
+}
+.center-text{
+    text-align: center;
 }
 
+header *{
+    font-family: 'Raleway', sans-serif !important;
+    letter-spacing: .17rem;
+}
+
+header h1{
+    font-family: 'Exo 2', sans-serif !important;
+    font-weight: 900;
+    font-style: italic;
+}
 p{
     font-size: 1rem;
     margin: 1em 0;
@@ -145,10 +252,19 @@ b{
     font-weight: 700;
 }
 
+.numerals{
+    font-family: 'Spartan', sans-serif;
+    font-size: .9rem;
+}
+.listNone{
+    list-style: none;
+}
+
 /* LISTS */
 ul, ol{
     font-size: 1rem;
-    font-weight: 400;
+    font-weight: 800;
+    /* text-shadow: 0px 0px 4px #ffffff; */
 }
 li{
     margin-top: 1.2em;
@@ -161,8 +277,8 @@ li{
     font-weight: 700;
 }
 
-code, code b, .weak, .grey, .bold{
-    font-family: 'Roboto Mono', monospace !important;
+code, code b, .weak, .weak-dm, .grey, .bold{
+    font-family: 'Azeret Mono', monospace !important;
 }
 .inlineCode{
     font-family: 'Roboto Mono', monospace !important;
@@ -172,16 +288,42 @@ code, code b, .weak, .grey, .bold{
     padding: 0.15em 0.7em;
     border-radius: 1em;
 }
+.inlineCode-DM{
+    font-family: 'Azeret Mono', monospace !important;
+    color: rgb(216, 203, 203);
+    text-shadow:
+    -0.1rem -0.1rem 1rem #feebc87c,
+    0.1rem 0.1rem 1rem #feebc87c;
+
+    background-color: #200617;
+    padding: 0.15em 0.7em;
+    border-radius: 1em;
+}
 .preTag{
     font-family: 'Roboto Mono', monospace !important;
     background-color: rgba(158, 158, 158, 0.1);
     border-radius: 0.4em;
 }
+.preTag2{
+    font-family: 'Azeret Mono', monospace !important;
+    background-color: #200617;
+    border-left: 2px solid rgb(216, 203, 203);
+    color: rgb(216, 203, 203);
+    text-shadow:
+    -0.1rem -0.1rem 1rem #feebc87c,
+    0.1rem 0.1rem 1rem #feebc87c;
+}
 .weak{
     color: rgba(0, 0, 0, 0.25);
 }
+.weak-dm{
+    color: #eee1ec98;
+    text-shadow:
+    -0.1rem -0.1rem 1rem #feebc838,
+    0.1rem 0.1rem 1rem #feebc838;
+}
 .grey{
-    color: rgba(0, 0, 0, 0.5);
+    color: #eee1ec;
 }
 .bold{
     font-weight: 900;
@@ -205,16 +347,34 @@ code, code b, .weak, .grey, .bold{
     box-shadow: 2px 2px 5px rgba(175, 175, 175);
     line-height: 1.8;
 }
-.blue{
+/* .blue{
     background-color: rgba(0, 0, 255, 0.3);
     border-radius: 0.5em;
     padding: 0.1em 0.3em;
     font-weight: 800;
     box-shadow: 2px 2px 5px rgba(175, 175, 175);
     line-height: 1.8;
+} */
+.blue{
+    background-color: #ffffff;
+    color: rgb(0, 0, 255);
+    box-shadow: 2px 2px 5px #ffffff;
+
+    border-radius: 0.5em;
+    padding: 0.1em 0.3em;
+    font-weight: 800;
+    line-height: 1.8;
 }
 .orange{
-    background-color: rgba(255, 166, 0, 0.600);
+    color: #e86a04;
+    text-shadow: 0px 0px 3px #eb7a1e;
+    border-radius: 0.5em;
+    padding: 0.1em 0.3em;
+    font-weight: 800;
+}
+.blue-darkMode{
+    color: #6d82ba;
+    text-shadow: 0px 0px 3px #3a358c;
     border-radius: 0.5em;
     padding: 0.1em 0.3em;
     font-weight: 800;
@@ -227,7 +387,60 @@ code, code b, .weak, .grey, .bold{
     box-shadow: 2px 2px 5px rgba(175, 175, 175);
     line-height: 1.8;
 }
-
-.eita{
-    overflow: hidden;
+.yellow-darkMode{
+    color: white;
+    border-radius: 0.5em;
+    padding: 0.1em 0.3em;
+    font-weight: 800;
+    text-shadow:
+        -0.2rem -0.2rem 1rem #dbba3d,
+        0 0 2rem var(--neon-yellow-text-color),
+        0 0 4rem var(--neon-yellow-text-color);
+    line-height: 1.8;
+}
+.yelloww{
+    color: #dbba3d;
+    border-radius: 0.5em;
+    padding: 0.1em 0.3em;
+    font-weight: 800;
+    line-height: 1.8;
+}
+.pink{
+    color: #ffd77b;
+    text-shadow:
+        0 0 .25rem #ff9d00,
+        0 0 .5rem #ff9d00;
+    border-radius: 0.5em;
+    padding: 0.1em 0.3em;
+    font-weight: 800;
+    line-height: 1.8;
+}
+.truthOrange-dm{
+    color: #ffd77b;
+    text-shadow:
+        0 0 .25rem #ff9d007c,
+        0 0 .5rem #ff9d007c;
+    font-weight: 800;
+    /*use pink*/
+}
+.pink-darkMode{
+    color: #eee1ec;
+    border-radius: 0.5em;
+    padding: 0.1em 0.3em;
+    text-shadow:
+        -0.2rem -0.2rem 1rem #ff00aa,
+        0.2rem 0.2rem 1rem #ff00aa,
+        -0.2rem -0.2rem 1rem #8d2985,
+        0.2rem 0.2rem 1rem #8d2985;
+    line-height: 1.8;
+}
+.neon-text{
+    color: #eee1ec;
+    border-radius: 0.5em;
+    padding: 0.1em 0.3em;
+    font-weight: 800;
+    text-shadow:
+        -0.1rem -0.1rem 1rem #8d298580,
+        0.1rem 0.1rem 1rem #8d298580;
+    line-height: 1.8;
 }
