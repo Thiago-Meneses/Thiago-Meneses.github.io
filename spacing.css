@@ -284,6 +284,10 @@
     padding-left:   calc(1rem * .25);
     padding-right:  calc(1rem * .25);
 }
+.px-0 {
+    padding-left:   0;
+    padding-right:  0;
+}
 @media (min-width: 768px) {
     .px-md-5 {
         padding-left:   calc(1rem * 3) !important;
@@ -305,4 +309,8 @@
         padding-left:   calc(1rem * .25) !important;
         padding-right:  calc(1rem * .25) !important;
     }
+}
+
+.noBullet {
+    list-style-type: none; 
 }
